@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Name</title>
+
+  <style>
+    :root {
+      --text-color: #111;
+      --muted-color: #555;
+      --link-color: #0066cc;
+      --bg-color: #ffffff;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+                   Roboto, Helvetica, Arial, sans-serif;
+      color: var(--text-color);
+      background: var(--bg-color);
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--link-color);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 40px;
+    }
+
+    /* Left column */
+    .sidebar {
+      font-size: 0.95rem;
+      text-align: center;
+    }
+
+    .profile-pic {
+      width: 100%;
+      max-width: 220px;
+      border-radius: 4px;
+      margin-bottom: 16px;
+    }
+
+    .name {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .links {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 8px;
+    }
+
+    .links a {
+      display: inline-block;
+    }
+
+    .links a img {
+      width: 24px;
+      height: 24px;
+      object-fit: contain;
+      opacity: 0.8;
+      transition: opacity 0.2s ease;
+    }
+
+    .links a:hover img {
+      opacity: 1;
+    }
+
+    .email {
+      margin-top: 12px;
+      color: var(--muted-color);
+      font-size: 0.9rem;
+      word-break: break-all;
+    }
+
+    /* Right column */
+    .content section {
+      margin-bottom: 32px;
+    }
+
+    .content h2 {
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    .content p {
+      margin-bottom: 12px;
+    }
+
+    .publications ul,
+    .interests ul {
+      padding-left: 18px;
+      margin: 0;
+    }
+
+    .publications li,
+    .interests li {
+      margin-bottom: 8px;
+    }
+
+    /* Responsive */
+    @media (max-width: 700px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+
+      .sidebar {
+        margin-bottom: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <!-- Left column -->
+    <aside class="sidebar">
+      <img src="ricardo_salinas_cropped.jpg" alt="Your photo" class="profile-pic" />
+
+      <div class="name">Ricardo Buitrago Ruiz</div>
+
+      <div class="links">
+        <a href="https://www.linkedin.com/in/ricardobuitrago/" target="_blank" title="LinkedIn">
+          <img src="linkedin_logo.png" alt="LinkedIn" />
+        </a>
+        <a href="https://scholar.google.com/citations?user=XXXX" target="_blank" title="Google Scholar">
+          <img src="google_scholar.png" alt="Google Scholar" />
+        </a>
+        <a href="https://x.com/rbuit_" target="_blank" title="X">
+          <img src="x_logo.jpg" alt="X" />
+        </a>
+      </div>
+
+      <div class="email">
+        ricardo [dot] ruiz [at] cartesia [dot] ai
+      </div>
+    </aside>
+
+    <!-- Right column -->
+    <main class="content">
+      <section class="about">
+        <p>
+          Hi there! I'm Ricardo, a Machine Learning researcher and engineer. 
+          I currently live in SF and work at Cartesia. I did a Master in Machine Learning at Carnegie Mellon University, 
+          where I worked under the supervision of Albert Gu and Andrej Risteski.
+        </p>    
+        <p>
+          Lately, I'm deeply engaged in two areas: 
+        </p>
+        <ul>
+          <li><strong>Inference Engineering:</strong> <em>How can we deploy complex machine learning pipelines in production?</em> 
+            I'm working a lot on optimizing inference, as well as building validation frameworks
+            to ensure quality.  </li>
+          <li><strong>Bridging fundamental understanding and applied research:</strong> 
+            <em>How can we use fundamental principles to design better machine learning products?</em>
+            Unfortunately, I think the Machine Learning community is divided into two groups: 
+            the ones that focus exclusively on practice and just "do whatever works", 
+            achieving short term gains but lacking clarity in the long term;
+            and the ones who focus too much on theory, relying on simplyfing assumptions
+            and ignoring what empirically works best. 
+            Having a strong background in both engineering and theory, I'm working on translating 
+            between the two.
+          </li>
+        </ul>
+      </section>
+
+      <section class="publications">
+        <h2>Publications</h2>
+        <ul>
+          <li>
+            R Buitrago, T Marwah, A Gu, A Risteski. 
+            <em>On the benefits of memory for modeling time-dependent PDEs</em>. 
+            International Conference on Learning Representations (ICLR), 2025. <strong style="color: #0066cc;">[Oral]</strong>
+            <a href="https://arxiv.org/abs/2409.02313" target="_blank">(arxiv)</a>
+          </li>
+          <li>
+            R Buitrago, A Gu. 
+            <em>Understanding and Improving Length Generalization in Recurrent Models</em>. 
+            International Conference on Machine Learning (ICML), 2025. 
+            <a href="https://arxiv.org/abs/2507.02782" target="_blank">(arxiv)</a> <a href="https://goombalab.github.io/blog/2025/improving-length-generalization/" target="_blank">(blog)</a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="interests">
+        <h2>Personal Interests</h2>
+        <p>
+            I'm highly driven to foster the Spanish Machine Learning / entrepreneurial ecosystem. 
+            If you have any doubts about Machine Learning / entrepreneurship / studying abroad / living in SF, feel free to reach out!
+            I'd love to know more about the journey of fellow Spaniards. 
+        </p>
+        <p>
+            Besides Machine Learning, I also deeply enjoy reading and talking about philosophy, psychology, 
+            religion, and economics. 
+        </p>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
