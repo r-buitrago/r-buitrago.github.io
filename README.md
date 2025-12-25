@@ -1,2 +1,1 @@
-# me
-Personal webpage
+Personal webpage.
